@@ -1,0 +1,57 @@
+#task1
+list = []
+num = int (input("How many numbers are in the list?"))
+
+for i in range(num):
+    number = int(input('Enter numbers: '))
+    list.append(number)
+
+print("Minimum number is: ", min(list))
+print("Maximum number is: ", max(list))
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+#task2.1
+def mostWordsFound(sent):
+    m = 0
+    sentence = ["alice and bob love leetcode"]
+    for i in sentence:
+        m = max(m, i.count(" ") + 1)
+    return m
+print("Output: ", mostWordsFound(sent=max))
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+#task2.2
+def mostWordsFound(sent):
+    m = 0
+    sentence = ["continue to win"]
+    for i in sentence:
+        m = max(m, i.count(" ") + 1)
+    return m
+print("Output: ", mostWordsFound(sent=max))
+
+'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+#task3
+class Garage:
+    def __init__(self):
+        self.car = {}
+        
+    def get_id(self):
+        return self.id
+        
+    def add_car(self, car):
+        self.cars_holder[car.get_id()] = car
+
+    def remove_car(self, car_id):
+        del self.cars_holder[car_id]
+
+    def __str__(self):
+        return 'id: {} brand: {}  model: {} '.format(self.id, self.brand,self.model)
+    
+    car = {
+    'id': '1',
+    'brand': 'Toyota',
+    'model': 'Camry',
+}
+
+g = Garage()
+g.add_car()
